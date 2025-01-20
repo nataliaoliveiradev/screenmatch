@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
@@ -13,12 +15,21 @@ public class Principal {
         Filme meuFilme = new Filme("A Estrada Perdida", 1997);
         meuFilme.setDuracaoEmMinutos(135);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
+        meuFilme.exibeFichaTecnica();
         meuFilme.avalia(9);
         meuFilme.avalia(9);
         meuFilme.avalia(10);
-        meuFilme.exibeFichaTecnica();
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
-        System.out.println("Média de avaliações: " + meuFilme.pegaMedia());
+        System.out.println(meuFilme.pegaMedia());
+
+
+        Filme outroFilme = new Filme("O Poderoso Chefão", 1972);
+        outroFilme.setDuracaoEmMinutos(175);
+        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
+
+        Filme filmeDoPaulo = new Filme("Dogville", 2003);
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.avalia(10);
 
         Serie lost = new Serie("Lost", 2004);
         lost.exibeFichaTecnica();
@@ -28,13 +39,7 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Quanto tempo para maratonar " + lost.getNome() + ": " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme("O Poderoso Chefão", 1972);
-        outroFilme.setDuracaoEmMinutos(175);
-        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
-        var filmeDoPaulo = new Filme("Dogville", 2003);
-        filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.avalia(10);
 
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
