@@ -1,5 +1,7 @@
-import br.com.alulra.screenmatch.modelos.Filme;
-import br.com.alulra.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+
 
 public class Principal {
     public static void main(String[] args)
@@ -27,6 +29,18 @@ public class Principal {
         lost.setAtiva(false);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Quanto tempo para maratonar " + lost.getNome() + ": " + lost.getDuracaoEmMinutos() + " minutos");
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("A Estrada Perdida");
+        outroFilme.setAnoDeLancamento(1997);
+        outroFilme.setDuracaoEmMinutos(135);
+        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println("Você precisa de " + calculadora.getTempoTotal() + " minutos para terminar sua lista");
 
     }
 }
