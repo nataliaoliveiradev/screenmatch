@@ -3,7 +3,6 @@
 <p align="center">
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
 <img src="https://img.shields.io/badge/GSON-000?style=for-the-badge&logo=google&logoColor=red"/>
-<img src="https://img.shields.io/badge/Alura-004D61?style=for-the-badge&logo=alura&logoColor=white"/>
 </p>
 
 ---
